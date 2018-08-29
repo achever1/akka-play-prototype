@@ -1,0 +1,31 @@
+@startuml
+
+
+  interface HTTP as HTTP1
+  [User Agent] --> HTTP1 : REST call
+
+package "Docker Compose" {
+
+
+  interface HTTP as HTTP2
+  interface HTTP as HTTP3
+
+  [Service1] << Futures >>
+  [Service2] << Futures >>
+  [Service3] << Remote actor >>
+
+
+  HTTP1 - [Service1]
+  HTTP2 - [Service2]
+  HTTP3 - [Service3]
+  [Service3] - TCP
+
+  [Service1] --> TCP : Akka message
+  [Service2] --> TCP : Akka message
+  [Service1] --> HTTP2 : REST call
+  [Service2] --> HTTP3 : REST call
+
+
+}
+
+@enduml
