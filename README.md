@@ -23,7 +23,7 @@ Simple project with Play and Akka Cluster to bootstrap a POC quickly and test a 
 
 ## Build
 ```
-sbt docker:PublishLocal
+sbt docker:publishLocal
 ```
 ## Run
 ```
