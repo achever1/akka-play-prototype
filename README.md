@@ -1,6 +1,6 @@
 # akka-play-prototype
 
-Simple project with Play and Akka Cluster to boostrap a POC quickly a technical feature on a microservice stack similar to tdc local stack
+Simple project with Play and Akka Cluster to bootstrap a POC quickly and test a technical feature on a microservice stack similar to the tdc local stack
 
 ## Architecture
 
@@ -13,6 +13,7 @@ Simple project with Play and Akka Cluster to boostrap a POC quickly a technical 
  - Akka actors messages (local and remote)
  - Akka cluster (with constructr)
  - Play endpoints
+ - Interservice REST calls
 
 
 ### Versions
